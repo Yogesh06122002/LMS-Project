@@ -57,7 +57,7 @@ export default function Dashboard() {
         {/* Main Content Area */}
         <div>
           {/* Tabs / Sections Header */}
-          <div style={{ display: 'flex', gap: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', mb: '2rem', paddingBottom: '1rem' }}>
+          <div style={{ display: 'flex', gap: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', marginBottom: '2rem', paddingBottom: '1rem' }}>
             <h2 style={{ fontSize: '1.5rem', color: 'var(--text-primary)', borderBottom: '2px solid var(--accent-color)' }}>Course Videos</h2>
             <h2 style={{ fontSize: '1.5rem', color: 'var(--text-secondary)' }}>PDF Materials</h2>
             <h2 style={{ fontSize: '1.5rem', color: 'var(--text-secondary)' }}>Assignments</h2>
