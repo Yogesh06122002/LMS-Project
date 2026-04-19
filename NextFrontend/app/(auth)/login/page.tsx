@@ -32,7 +32,7 @@ export default function Login() {
 
       localStorage.setItem('token', data.access_token);
       localStorage.setItem('role', data.user.role);
-      
+
       // Force page reload to update navbar state
       window.location.href = '/dashboard';
     } catch (err: any) {
@@ -48,7 +48,7 @@ export default function Login() {
         <h2 className="text-gradient" style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '2rem' }}>
           {isLogin ? 'Welcome Back' : 'Create Account'}
         </h2>
-        
+
         {error && (
           <div style={{ background: 'rgba(239, 68, 68, 0.1)', color: 'var(--danger-color)', padding: '1rem', borderRadius: 'var(--radius-sm)', marginBottom: '1.5rem', fontSize: '0.9rem' }}>
             {error}
@@ -58,10 +58,10 @@ export default function Login() {
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label className="input-label">Email Address</label>
-            <input 
-              type="email" 
-              className="input-field" 
-              required 
+            <input
+              type="email"
+              className="input-field"
+              required
               value={email}
               onChange={e => setEmail(e.target.value)}
               placeholder="you@example.com"
@@ -69,17 +69,17 @@ export default function Login() {
           </div>
           <div className="input-group">
             <label className="input-label">Password</label>
-            <input 
-              type="password" 
-              className="input-field" 
-              required 
+            <input
+              type="password"
+              className="input-field"
+              required
               value={password}
               onChange={e => setPassword(e.target.value)}
               placeholder="••••••••"
             />
           </div>
-          
-          {!isLogin && (
+
+          {/* {!isLogin && (
             <div className="input-group">
               <label className="input-label">Role</label>
               <select 
@@ -92,7 +92,7 @@ export default function Login() {
                 <option value="ADMIN">Admin</option>
               </select>
             </div>
-          )}
+          )} */}
 
           <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '1rem' }} disabled={loading}>
             {loading ? <div className="spinner" /> : (isLogin ? 'Sign In' : 'Sign Up')}
@@ -101,7 +101,7 @@ export default function Login() {
 
         <p style={{ textAlign: 'center', marginTop: '2rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
           {isLogin ? "Don't have an account? " : "Already have an account? "}
-          <button 
+          <button
             type="button"
             onClick={() => setIsLogin(!isLogin)}
             style={{ background: 'none', border: 'none', color: 'var(--accent-color)', cursor: 'pointer', fontWeight: 600, fontSize: '0.9rem' }}
